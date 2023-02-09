@@ -1,9 +1,9 @@
-FROM node:16.17.0-bullseye-slim AS ui-build 
+FROM node:17-alpine As server-build
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install  
 
 COPY server.js ./
 COPY stlfolders ./stlfolders

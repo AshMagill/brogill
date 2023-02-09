@@ -1,16 +1,14 @@
-FROM node AS Production
+FROM node:16.17.0-bullseye-slim AS ui-build 
 
-ENV NODE_ENV=production
+WORKDIR /app
 
-WORKDIR /usr/src/api
+COPY package*.json ./
 
-COPY package.json .
-COPY package-lock.json .
+RUN npm install 
 
-RUN npm install
+COPY . ./
 
-COPY . .
+CMD ["npm", "start"]
 
-RUN npm run build
 
-CMD ["sh","-c","npm run start:production"]
+
