@@ -12,9 +12,6 @@ const About = () => {
         <Link className="linkabout" to="/">
           Mk2
         </Link>
-        <Link className="linkabout" to="/about">
-          Demo
-        </Link>
       </ul>
       <div className="img-container-about">
         <img className="logo " src={logo} alt="Brogill logo" />

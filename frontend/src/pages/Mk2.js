@@ -23,7 +23,7 @@ const Mk2 = () => {
         <p>Brogill Mk2</p>
         <a
           className="App-link2"
-          href="http://localhost:5000/download/mk2.zip"
+          href="http://www.brogill.com/download/mk2.zip"
           target="_blank"
           rel="noopener noreferrer"
         >
