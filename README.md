@@ -28,4 +28,4 @@ for ec2 frontend:
 docker container run -d -p 80:3000 --rm brogill-client
 
 for ec2 backend:
-docker container run -d -p 443:5000 --rm brogill-server
+docker container run -d -p 5000:5000 --rm brogill-server
