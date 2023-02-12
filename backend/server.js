@@ -5,7 +5,7 @@ const port = 5000;
 //
 // GET http://localhost:3000/download/mk1.zip
 //
-app.get("/download/:filename", (req, res) => {
+app.get("brogill.com/download/:filename", (req, res) => {
   const filePath = __dirname + "/stlfolders/" + req.params.filename;
   res.download(
     filePath,
@@ -24,7 +24,7 @@ app.get("/download/:filename", (req, res) => {
 //
 // GET http://localhost:3000/download/mk2.zip
 //
-app.get("/download/:filename", (req, res) => {
+app.get("brogill.com/download/:filename", (req, res) => {
   const filePath = __dirname + "/stlfolders/" + req.params.filename;
   res.download(
     filePath,
