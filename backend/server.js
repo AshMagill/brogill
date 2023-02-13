@@ -2,10 +2,17 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "https://www.brogill.com",
+  })
+);
+
 //
 // GET http://localhost:3000/download/mk1.zip
 //
-app.get("brogill.com/download/:filename", (req, res) => {
+app.get("/download/:filename", (req, res) => {
   const filePath = __dirname + "/stlfolders/" + req.params.filename;
   res.download(
     filePath,
@@ -24,7 +31,7 @@ app.get("brogill.com/download/:filename", (req, res) => {
 //
 // GET http://localhost:3000/download/mk2.zip
 //
-app.get("brogill.com/download/:filename", (req, res) => {
+app.get("/download/:filename", (req, res) => {
   const filePath = __dirname + "/stlfolders/" + req.params.filename;
   res.download(
     filePath,
